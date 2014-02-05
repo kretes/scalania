@@ -12,6 +12,8 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 
 libraryDependencies in Global += "org.specs2" %% "specs2" % "2.4-SNAPSHOT" % "test"
 
+libraryDependencies in Global += "org.assertj" % "assertj-core" % "1.5.0" % "test"
+
 resolvers in Global ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
 lazy val scalania = project in file(".") aggregate exercises
