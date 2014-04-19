@@ -12,5 +12,19 @@ class P01Spec extends Specification with ExamplesBlock {
           solution >> { s(3, 5, 1000) must_== 233168 }
       }
     }
+
+//    "Find the sum of all the multiples of 3 or 5 below 15." in {
+//      solutions.map(s => (s"${solutionName(s)} solution", s)).foreach {
+//        case (solution, s) =>
+//          solution >> { s(3, 5, Integer.MAX_VALUE) must_== 45 }
+//      }
+//    }
+
+    "Find the sum of all the multiples of 3 or 5 below 15." in {
+      solutions.map(s => (s"${solutionName(s)} solution", s)).foreach {
+        case (solution, s) =>
+          solution >> { s(3, 5, Integer.MAX_VALUE) must_== 45 }
+      }
+    }
   }
 }
